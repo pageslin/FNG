@@ -25,11 +25,11 @@ The outputs is a vtk file with name given in the command line containing the noi
 Examples:
 ---------
 
-Generate an uncorrelated force field without periodic energy profile (sigma<=0 and E_per=0):
+Generate an uncorrelated force field without periodic energy profile (sigma<=0 and E_per=0): \
 ./noise_generator.x 256 256 1.0 1.0 -1 0 1234 noise.vtk
 
-Generate an uncorrelated force field with periodic energy profile (sigma<=0 and E_per=1):
+Generate an uncorrelated force field with periodic energy profile (sigma<=0 and E_per=1): \
 ./noise_generator.x 256 256 1.0 1.0 -1 1 1234 noise.vtk
 
-Generate a Gaussian correlated force field with periodic energy profile (sigma=2.0 and E_per=1):
+Generate a Gaussian correlated force field with periodic energy profile (sigma=2.0 and E_per=1): \
 ./noise_generator.x 256 256 1.0 1.0 2.0 1 1234 noise.vtk
