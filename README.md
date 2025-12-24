@@ -6,15 +6,15 @@ This C program generates uncorrelated or Gaussian correlated random force fields
 -------
 Inputs:
 -------
-The arguments of the program are specified as line command as follows:
-#1: Nx, number of grid points along x direction [int]
-#2: Ny, number of grid points along y direction [int]
-#3: dx, grid spacing in x direction [AA]
-#4: dy, grid spacing in y direction [AA]
-#5: sigma, Gaussian spreading distance [AA]. If sigma<0, uncorrelated noise is generated
-#6: E_per, this flag is 1 to indicate that the energy profile corresponding to the force field is periodic along the y direction; E_per=0 otherwise [0 or 1].
-#7: random seed [int]
-#8: file name for the output random force field.
+The arguments of the program are specified as line command as follows: \
+#1: Nx, number of grid points along x direction [int] \
+#2: Ny, number of grid points along y direction [int] \
+#3: dx, grid spacing in x direction [AA] \
+#4: dy, grid spacing in y direction [AA] \
+#5: sigma, Gaussian spreading distance [AA]. If sigma<0, uncorrelated noise is generated \
+#6: E_per, this flag is 1 to indicate that the energy profile corresponding to the force field is periodic along the y direction; E_per=0 otherwise [0 or 1]. \
+#7: random seed [int] \
+#8: file name for the output random force field. \
 
 -------
 Ouputs:
