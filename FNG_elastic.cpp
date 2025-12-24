@@ -150,7 +150,6 @@ void Write_field_txt(REAL *F, const char *fname)
 	fprintf(OutFile,"#POINT_DATA \t %d\n",NR);
 	fprintf(OutFile,"#ORDERING \t in column (Ny*i+j)\n");
 	
-	float temp;
 	int ind;
 	
     for(int i=0;i<NX;i++)
@@ -201,14 +200,13 @@ int main(int argc, char **argv)
     REAL *Rr;          // pointer of the real space data
     COMPLEX *Rk;       // pointer of the fourier space data
 
-    fftw_plan plan_R_r2c, plan_R_c2r;  // fft plan
+    fftw_plan plan_R_c2r;  // fft plan
 
     // allocate
     Rr = (REAL*) fftw_malloc(sizeof(REAL)*NR);
     Rk = (COMPLEX*) fftw_malloc(sizeof(COMPLEX)*NK);
         
     // prepare plans    
-    plan_R_r2c = fftw_plan_dft_r2c_2d(NX, NY, Rr, reinterpret_cast<fftw_complex*>(Rk), FFTW_ESTIMATE);
     plan_R_c2r = fftw_plan_dft_c2r_2d(NX, NY, reinterpret_cast<fftw_complex*>(Rk), Rr, FFTW_ESTIMATE);
 
     // define the noise in Fourier space based on the auto-correlation function [Geslin et al. JMPS 2021]
@@ -254,7 +252,7 @@ int main(int argc, char **argv)
                  // /!\ special case for j=0 and j==NY/2 because of folding of C2R Fourier transform
                  if(j==0) 
                  {
-                     if(E_per=1)
+                     if(E_per==1)
                      {
                         Rk[ind] = 0;
                      }
@@ -277,7 +275,7 @@ int main(int argc, char **argv)
                  // /!\ special case for j=0 and j==NY/2 because of folding of C2R Fourier transform
                  if(j==0) 
                  {
-                     if(E_per=1)
+                     if(E_per==1)
                      {
                         Rk[ind] = 0;
                      }
