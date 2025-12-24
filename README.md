@@ -1,7 +1,7 @@
 ------------
 Description:
 ------------
-This C program generates uncorrelated or Gaussian correlated random force fields on a regular grid. It first generates random amplitudes for Fourier modes and perform an fft to obtain the real space force field. Compilation requires the FFTW3 library. The output is a vtk binary file containing the values of the field on a regular grid.
+This C program generates uncorrelated or Gaussian correlated random force fields on a regular grid. It first generates random amplitudes for Fourier modes and perform an fft to obtain the real space force field. The resulting field as average 0 and standard deviation 1 (on average). Compilation requires the FFTW3 library. The output is a vtk binary file containing the values of the field on a regular grid.
 
 -------
 Inputs:
@@ -12,14 +12,14 @@ The arguments of the program are specified as line command as follows:
 #3: dx, grid spacing in x direction [AA]
 #4: dy, grid spacing in y direction [AA]
 #5: sigma, Gaussian spreading distance [AA]. If sigma<0, uncorrelated noise is generated
-#6: E_per, this flag is 1 to indicate that the energy profile corresponding to the force field is periodic along the y direction; E_per=0 otherwise.
+#6: E_per, this flag is 1 to indicate that the energy profile corresponding to the force field is periodic along the y direction; E_per=0 otherwise [0 or 1].
 #7: random seed [int]
-#8: file name for the random noise
+#8: file name for the output random force field.
 
 -------
 Ouputs:
 -------
-The outputs is a vtk file with name given in the command line containing the noise on a 2D regular grid of dimension Nx x Ny. Note that the file is binary and each float is written with the Big Endian convention, which is traditional for vtk files. 
+The outputs is a vtk file with name given in the command line containing the noise on a 2D regular grid of dimension Nx x Ny. Note that the file is binary and each float is written with the Big Endian convention, which is traditional for vtk files. Also, the values of the field f[i,j] are listed in row-major order: f[i,j],f[i,j+1],...,f[i+1,j],f[i+1,j+1]... 
 
 ---------
 Examples:
