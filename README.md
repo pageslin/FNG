@@ -81,7 +81,7 @@ The outputs is a vtk file with name given in the command line containing the noi
 Example:
 --------
 
-Generate a noise with a spreading parameter of 1AA for an undissociated edge dislocations, while imposing the periodicity of the energy landscape (a=3AA, E_per=1):
+Generate a noise with a spreading parameter of 1AA for an undissociated edge dislocations, while imposing the periodicity of the energy landscape (a=3AA, E_per=1):\
 ./FNG_elastic.x 256 256 1.0 1.0 3.0 0 90 1 1234 noise.vtk
 
 
