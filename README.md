@@ -34,13 +34,13 @@ Examples:
 ---------
 
 Generate an uncorrelated force field without periodic energy profile (sigma<=0 and E_per=0): \
-./noise_generator.x 256 256 1.0 1.0 -1 0 1234 noise.vtk
+./FNG_iso.x 256 256 1.0 1.0 -1 0 1234 noise.vtk
 
 Generate an uncorrelated force field with periodic energy profile (sigma<=0 and E_per=1): \
-./noise_generator.x 256 256 1.0 1.0 -1 1 1234 noise.vtk
+./FNG_iso.x 256 256 1.0 1.0 -1 1 1234 noise.vtk
 
 Generate a Gaussian correlated force field with periodic energy profile (sigma=2.0 and E_per=1): \
-./noise_generator.x 256 256 1.0 1.0 2.0 1 1234 noise.vtk
+./FNG_iso.x 256 256 1.0 1.0 2.0 1 1234 noise.vtk
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------------------------
@@ -82,7 +82,6 @@ Example:
 --------
 
 Generate a noise with a spreading parameter of 1AA for an undissociated edge dislocations, while imposing the periodicity of the energy landscape (a=3AA, E_per=1):
-./noise_generator.x 256 256 1.0 1.0 3.0 0 90 1 1234 noise.vtk
-
+./FNG_elastic.x 256 256 1.0 1.0 3.0 0 90 1 1234 noise.vtk
 
 
