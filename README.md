@@ -1,4 +1,4 @@
-This project contains two programs enabling to generate uncorrelated and correlated random force field. 
+This Fourier Noise Generator (FNG) project contains two programs enabling to generate uncorrelated and correlated random force field. 
 
 --------------------------------------------------------------------------
 --------------------------------------------------------------------------
